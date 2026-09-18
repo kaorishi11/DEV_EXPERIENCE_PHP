@@ -2,6 +2,32 @@
 include 'conexao.php';
 session_start();
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    $r = $conn->query("SELECT * FROM usuarios WHERE email='$email' AND senha='$senha'");
+
+    if ($r->num_rows == 1) {
+        $u = $r->fetch_assoc();
+
+        $_SESSION['id']    = $u['id'];
+        $_SESSION['nome']  = $u['nome'];
+        $_SESSION['tipo']  = $u['tipo'];
+
+        if ($u['tipo'] == 'admin') {
+            header("Location: adm/home_admin.php");
+        } elseif ($u['tipo'] == 'veterinario') {
+            header("Location: veterinario/home_veterinario.php");
+        } else {
+            header("Location: tutor/home_tutor.php");
+        }
+        exit;
+    } else {
+        echo "Email ou senha incorretos.";
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

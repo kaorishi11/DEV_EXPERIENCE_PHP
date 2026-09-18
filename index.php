@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,4 +14,9 @@
         <button><a href="login.php">Entrar</a></button>
     </div>
 </body>
+<footer> 
+    <div>
+        <p> © 2026 PETVIDA — Clínica Veterinária Amigo Fiel </p>
+    </div>  
+</footer>
 </html>

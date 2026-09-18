@@ -1,3 +1,7 @@
+<?php
+include "../conexao.php";
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +10,10 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <h1>PETVIDA</h1>
-        <button><a href="login.php">Entrar</a></button>
-    </div>
+    <h1>Bem-vindo ao sistema do veterinário!</h1>
+    Atendimentos do dia
+    Próximos horários
+    Total de consultas
+    Vacinas aplicadas
 </body>
 </html>

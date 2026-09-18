@@ -1,3 +1,8 @@
+<?php
+include "../conexao.php";
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +11,10 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <h1>PETVIDA</h1>
-        <button><a href="login.php">Entrar</a></button>
-    </div>
+    <h1>Meus Agendamentos</h1>
+    proximos Agendamentos
+    atendimentos anteriores
+    status
+    cancelar
 </body>
 </html>

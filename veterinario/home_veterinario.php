@@ -102,11 +102,12 @@ $dados = mysqli_fetch_assoc($resultado_dados);
     <p>Olá, Dr(a). <?php echo htmlspecialchars($dados['nome']); ?></p>
     <nav>
         <a href="home_veterinario.php">Início</a>
-        <a href="agenda.php">Agenda</a>
-        <a href="animais.php">Animais</a>
-        <a href="prontuarios.php">Prontuários</a>
-        <a href="vacinas.php">Vacinas</a>
-        <a href="horarios.php">Horários</a>
+        <a href="agenda_veterinario.php">Agenda</a>
+        <a href="vacina.php">Vacina</a>
+        <a href="atendimento.php">Atendimentos</a>
+        <a href="historico_animal.php">Animais</a>
+        <a href="prescricao.php">Prescrição</a>
+        <a href="perfil_veterinario.php">Perfil</a>
         <a href="../logout.php">Sair</a>
     </nav>
 </header>
